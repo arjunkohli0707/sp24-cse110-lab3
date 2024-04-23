@@ -1,14 +1,24 @@
+/*Element selector below*/
 h1 {
     color: red;
     text-align: center;
+    padding: 40px 10px 7px 8px;
+    margin: 40px 30px 30px 30px;
+    border:solid;
+    border-width: 0.2cm;
+    background-color: beige;
 }
 
 #meeting-topic {
-    color: blue;
+    color: rgb(102, 120, 183);
+    text-decoration: underline;
+    text-align: left;
+    border: solid;
+    border-width: 2px 3px 2px 20px;
 }
 
 .date {
-    color: red;
+    color: hsl(9, 17%, 55%);
 }
 
 * {
@@ -16,7 +26,7 @@ h1 {
 }
 
 a[attrib]{
-    background-color: beige;
+    background-color: #584343;
 }
 
 a:hover{
@@ -24,7 +34,7 @@ a:hover{
 }
 
 p, a{
-    background-color: yellow;
+    background-color: color(a98-rgb 1 0 0);
 }
 
 header h2{
@@ -32,23 +42,31 @@ header h2{
 }
 
 div > p{
-    color: burlywood;
+    color: color-mix(in srgb, #34c9eb 30%, white);
 }
 
 i + span {
     text-decoration: line-through;
 }
 
+@property --h2-color {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: cornflowerblue;
+}
+
 div ~ h2 {
-    color: red;
+    color: var(--h2-color, red);
 }
 
 p.form {
+    font-size: 2ch;
     color:aqua;
 }
 
 form:has(+p){
     color:green;
+    font-size: 1.5em;
 }
 
 .meeting-minutes{
@@ -59,4 +77,23 @@ form:has(+p){
             background-color: yellow;
         }
     }
+}
+
+img{
+    align-content: center;
+    border: solid;
+    border-top-width: 10px;
+    border-bottom-width: 1cm;
+    border-right-width: 15mm;
+    border-radius: 10px;
+    border-color:rgb(102, 120, 183);
+    margin-top:auto;
+    margin-bottom:auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding-top:5%;
+    padding-left:6%;
+    padding-bottom:7%;
+    padding-right:8%;
 }
