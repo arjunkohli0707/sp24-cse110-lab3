@@ -1,0 +1,62 @@
+h1 {
+    color: red;
+    text-align: center;
+}
+
+#meeting-topic {
+    color: blue;
+}
+
+.date {
+    color: red;
+}
+
+* {
+    position: static;
+}
+
+a[attrib]{
+    background-color: beige;
+}
+
+a:hover{
+    color: red;
+}
+
+p, a{
+    background-color: yellow;
+}
+
+header h2{
+    text-align: right;
+}
+
+div > p{
+    color: burlywood;
+}
+
+i + span {
+    text-decoration: line-through;
+}
+
+div ~ h2 {
+    color: red;
+}
+
+p.form {
+    color:aqua;
+}
+
+form:has(+p){
+    color:green;
+}
+
+.meeting-minutes{
+    font-size: 1.2rem;
+    & > a {
+        color: tomato;
+        &:hover{
+            background-color: yellow;
+        }
+    }
+}
