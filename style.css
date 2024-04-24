@@ -1,4 +1,10 @@
 /*Element selector below*/
+
+body {
+    font-family: 'Jersey 25';
+    max-width: 100%;
+}
+
 h1 {
     color: red;
     text-align: center;
@@ -31,10 +37,16 @@ a[attrib]{
 
 a:hover{
     color: red;
+    display:block;
+}
+
+form:active{
+    color: grey;
 }
 
 p, a{
     background-color: color(a98-rgb 1 0 0);
+    display: inline-block;
 }
 
 header h2{
@@ -43,10 +55,15 @@ header h2{
 
 div > p{
     color: color-mix(in srgb, #34c9eb 30%, white);
+    height:auto;
+    width:auto;
+    max-width: 2cm;
+    min-width: 2mm;
 }
 
 i + span {
     text-decoration: line-through;
+    position:static;
 }
 
 @property --h2-color {
@@ -57,6 +74,7 @@ i + span {
 
 div ~ h2 {
     color: var(--h2-color, red);
+    position:relative;
 }
 
 p.form {
@@ -96,4 +114,37 @@ img{
     padding-left:6%;
     padding-bottom:7%;
     padding-right:8%;
+    max-width: 100%;
 }
+
+video{
+    max-width: 100%;
+}
+
+.flex-container{
+    display: flex;
+    background-color: blanchedalmond;
+    flex-direction:column;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
+}
+
+.grid-container{
+    display: grid;
+    background-color: greenyellow;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 10px 10px 10px;
+    grid-area:auto;
+}
+
+.grid-item {
+    background-color: #eee;
+    padding: 20px;
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+      width: 100%; /* Change width to full width */
+    }
+  }

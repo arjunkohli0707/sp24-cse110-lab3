@@ -2,8 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memory Munchers First Brainstorm!</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif; /* Apply the 'Roboto' font to the body */
+    }
+  </style>
   </head>
   <body>
     <main>
@@ -19,7 +26,7 @@
 
         <hr>
 
-        <section>
+        <section class="flex-container">
             <details>
             <summary>Attendees:</summary>
             <h3>Team leads:</h3>
@@ -85,16 +92,23 @@
             </fieldset>
         </form> 
 
-        <p>Enter any topics you want us to cover in the next meeting below:</p>
+        <p>Enter any topics you want us to cover in the next meeting:</p>
         <textarea rows="4" cols="50" name="comment" form="usrform">
         </textarea>
 
-        <p>Lastly, and very importantly, press the button below:</p>
+        <div class="grid-container">
+            <div class="grid-item">7</div>
+            <div class="grid-item">8</div>
+            <div class="grid-item">9</div>
+        </div>
+        
+        <p>Lastly, and very importantly, press this button:</p>
         <button type="button" onclick="alert('Have a great day!')">Click Me!</button>
 
         <footer>
             <p><strong>Developer: Arjun Kohli</strong></p>
         </footer>
     </main>
+
   </body>
 </html>
